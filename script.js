@@ -36,7 +36,7 @@ function verCategorias() {
         .catch(error => console.log("Error al cargar categorías: ", error));
 }
 
-// Función para cargar categorías en el select de edición
+
 function cargarCategoriasEnEdicion() {
   fetch(categoriaAPI)
     .then(response => response.json())
@@ -66,11 +66,11 @@ function agregarProductos() {
         .then(response => response.text())
         .then(data => {
             if (data === "OK") {
-                verProductos();
                 document.getElementById("tituloProducto").value = "";
                 document.getElementById("precioPeso").value = "";
                 document.getElementById("precioDolar").value = "";
                 document.getElementById("categoriaProducto").value = "";
+                alert("Producto agregado correctamente");
             } else {
                 alert("Error al agregar producto: " + data);
             }
