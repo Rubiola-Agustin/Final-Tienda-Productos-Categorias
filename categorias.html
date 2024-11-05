@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Categorías</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="verCategorias()">
+    <script src="header.js"></script>
+    <main>
+      <h1>Gestión de Categorías</h1>
+      
+
+      <div class="inputsAgregar">
+        <form action="#">
+          <input type="text" name="nombreCategoria" id="nombreCategoria" placeholder="Ingrese el nombre de la categoría" required />
+          <button type="button" onclick="agregarCategoria()">Agregar Categoría</button>
+        </form>
+      </div>
+
+
+      <div class="tablaprincipal">
+        <table>
+            <tr>
+              <th>Nombre de la Categoría</th>
+              <th>Editar</th>
+              <th>Eliminar</th>
+            </tr>
+            <tbody id="listaCategorias"></tbody>
+          </table>
+      </div>
+
+
+      <dialog id="formularioEditarCategoria">
+        <form action="#">
+          <input type="hidden" id="idCategoriaEditada">
+          <input type="text" name="nombreCategoriaEditada" id="nombreCategoriaEditada" placeholder="Nuevo nombre de la categoría" required />
+        </form>
+        <button type="button" onclick="editarCategoria()">Guardar Cambios</button>
+        <button type="button" onclick="cerrarDialog('formularioEditarCategoria')">Cancelar</button>
+      </dialog>
+      
+
+      <dialog id="dialogEliminarCategoria">
+        <p>¿Estás seguro de que deseas eliminar esta categoría?</p>
+        <div class="opciones">
+          <button onclick="eliminarCategoria()" class="eliminar">Sí</button>
+          <button onclick="cerrarDialog('dialogEliminarCategoria')" class="no-eliminar">No</button>
+        </div>
+      </dialog>
+
+      <div class="footer">
+        <script src="footer.js"></script>
+      </div>
+    </main>
+    <script src="categorias.js"></script>
+</body>
+</html>

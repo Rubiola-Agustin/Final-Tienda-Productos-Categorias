@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="header.js"></script>
+    <main>
+        <h1>Gestión de Productos</h1>
+        
+        <div class="inputsAgregar">
+            <form id="formAgregarProducto">
+                <input type="text" name="tituloProducto" id="tituloProducto" placeholder="Ingrese el producto" required />
+                <input type="number" name="precioPeso" id="precioPeso" placeholder="Ingrese el precio en pesos" required />
+                <input type="number" name="precioDolar" id="precioDolar" placeholder="Ingrese el precio en dólares" required />
+                <select id="categoriaProducto" name="categoria" required>
+                    <option value="">Seleccionar Categoría</option>
+                </select>
+                <button type="button" onclick="agregarProductos()">Agregar Producto</button>
+            </form>
+        </div>
+
+        <div class="footer">
+            <script src="footer.js"></script>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          verCategorias();
+      });
+    </script>
+</body>
+</html>

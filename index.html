@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Practico Laboratorio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="header.js"></script>
+    <main>
+      <h1>Productos Disponibles</h1>
+
+      <div class="tablaprincipal">
+        <table>
+            <thead>
+              <tr>
+                <th>Título</th>
+                <th>Precio Pesos</th>
+                <th>Precio Dólares</th>
+                <th>Categoría</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+              </tr>
+            </thead>
+            <tbody id="identificador"></tbody>
+        </table>
+      </div>
+        
+      <dialog id="formularioEditar">
+        <form action="#">
+          <input type="text" name="id" id="id" disabled />
+          <input type="text" name="nombre" id="tituloProductoEditado" placeholder="Título del producto" />
+          <input type="number" name="precioPeso" id="precioPesoEditado" placeholder="Precio en pesos" />
+          <input type="number" name="precioDolar" id="precioDolarEditado" placeholder="Precio en dólares" />
+          <select id="categoriaSelectEditado">
+            <option value="" >Seleccione una categoría</option>
+          </select>
+        </form>
+        <button type="submit" id="guardarCambios" onclick="editarProducto()">Guardar cambios</button>
+        <button onclick="cerrarDialog('formularioEditar')">Salir</button>
+      </dialog>
+  
+
+    </main>
+    
+    <div class="footer">
+      <script src="footer.js"></script>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
